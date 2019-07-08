@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_catalogo"
+            android:icon="@drawable/ic_pila_libri_50x50"
+            android:title="Catalogo" />
+        <item
+            android:id="@+id/nav_inserisci"
+            android:icon="@drawable/ic_add_book_50x50"
+            android:title="New Books" />
+
+        <item
+            android:id="@+id/nav_ricerca"
+            android:icon="@drawable/cerca_old"
+            android:title="Ricerca" />
+        <item
+            android:id="@+id/nav_prestiti"
+            android:icon="@drawable/ic_prestiti"
+            android:title="Prestiti" />
+        <item
+            android:id="@+id/nav_profilo"
+            android:icon="@drawable/ic_profilo_utente_50x50"
+            android:title="Profilo" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="it.android.j940549.mybiblioteca"
+    android:targetSandboxVersion="2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="27" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/ic_app_splash_act_96x96"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_app_splash_act_96x96"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="it.android.j940549.mybiblioteca.Activity_Utente.UtenteNav"
+            android:label="@string/title_activity_utente_nav"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="it.android.j940549.mybiblioteca.Activity_Esito_Ricerche.Esito_Ricerca"
+            android:label="@string/title_activity_esito__ricerca"
+            android:parentActivityName="it.android.j940549.mybiblioteca.Activity_Utente.UtenteNav"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="it.android.j940549.mybiblioteca.Activity_Utente.UtenteNav" />
+        </activity>
+        <activity android:name="it.android.j940549.mybiblioteca.Catalogo_libri.Dettaglio_libro" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="it.android.j940549.mybiblioteca.Activity_Utente.UtenteNav" />
+        </activity>
+        <activity android:name="it.android.j940549.mybiblioteca.SplashActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="it.android.j940549.mybiblioteca.Catalogo_libri.Modifica_Book"
+            android:label="@string/title_activity_modifica__book"
+            android:parentActivityName="it.android.j940549.mybiblioteca.Catalogo_libri.Dettaglio_libro"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="it.android.j940549.mybiblioteca.Catalogo_libri.Dettaglio_libro" />
+        </activity>
+    </application>
+
+</manifest>
